@@ -58,4 +58,8 @@ src/components/          estado demonstrativo e componentes compartilhados
 
 ## Hospedagem
 
-O projeto pode ser implantado em um serviço compatível com Next.js, como Vercel. A implantação exige acesso à conta e autorização no provedor. A simulação no navegador não deve ser usada para proteger conteúdo comercial.
+O GitHub Actions publica a exportação estática no GitHub Pages sempre que há um push para `main` (ou ao iniciar manualmente o workflow `Publish static site to GitHub Pages`). A URL do projeto será `https://donyxxj7.github.io/ludipim-area-do-aluno/` depois que a primeira execução terminar com sucesso. Se a publicação automática não iniciar, em **Settings → Pages → Build and deployment** selecione **GitHub Actions**.
+
+Para gerar os mesmos arquivos estáticos localmente, use `GITHUB_PAGES=true npm run build`; a pasta resultante é `out/`. Sem essa variável, `npm run dev` e `npm run build` mantêm os caminhos locais normais.
+
+A simulação no navegador não deve ser usada para proteger conteúdo comercial.
